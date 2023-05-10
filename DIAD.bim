@@ -191,7 +191,7 @@
           },
           {
             "name": "Sales",
-            "expression": "SUM(Sales[Revenue])",
+            "expression": "MAX(Sales[Revenue])",
             "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
             "lineageTag": "46bda03e-23e6-495c-9f17-de0d6a973627",
             "annotations": [
