@@ -1,0 +1,23 @@
+model Model
+	compatibilityLevel: 1567
+	culture: en-US
+	dataAccessOptions:
+		legacyRedirects
+		returnErrorValuesAsNull
+	defaultPowerBIDataSourceVersion: PowerBI_V3
+	sourceQueryCulture: en-US
+
+queryGroup 'Transform File from International'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transform File from International\Sample Query'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.116.966.0 (23.04)
+
+annotation PBI_QueryOrder = ["Sales","Product","Geography","Manufacturer","International","Sample File","Sample File Parameter1","Transform Sample File from International","Transform File from International"]
+
