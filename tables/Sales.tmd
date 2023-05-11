@@ -16,7 +16,7 @@ table Sales
 			in
 			    #"Renamed Columns"
 
-	measure 'PY Sales' = CALCULATE(SUM(Sales[Revenue]),SAMEPERIODLASTYEAR('Date'[Date]))
+	measure 'PY Sales' = CALCULATE(MIN(Sales[Revenue]),SAMEPERIODLASTYEAR('Date'[Date]))
 		formatString:= \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: bd49c349-5773-4b88-b15e-a01d393ee9a0
 
