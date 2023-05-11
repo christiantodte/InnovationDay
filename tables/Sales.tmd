@@ -38,7 +38,7 @@ table Sales
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure Sales = SUM(Sales[Revenue])// but no we need to merge it dont we
+	measure Sales = SUM(Sales[Revenue])
 		formatString:= \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 46bda03e-23e6-495c-9f17-de0d6a973627
 
