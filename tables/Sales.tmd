@@ -24,7 +24,7 @@ table Sales
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure '% Growth' = DIVIDE(SUM(Sales[Revenue])-[PY Sales],[PY Sales])
+	measure '% Growth' = DIVIDE(SUM(Sales[Revenue])-[PY Sales],[PY Sales])// and this one as well 
 		formatString:= 0.00%;-0.00%;0.00%
 		lineageTag: 07ca62c6-46a2-4d74-9100-9ab7fb79ed8f
 
