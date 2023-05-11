@@ -44,7 +44,7 @@ table Sales
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure 'VanArsdel Market Share' = DIVIDE([VanArsdel Sales],Sales[Sales])
+	measure 'VanArsdel Market Share' = DIVIDE([VanArsdel Sales],Sales[Sales])*100
 		formatString:= 0.00%;-0.00%;0.00%
 		lineageTag: e1e2c8fb-e5c1-4fbe-a4e2-add7fe9dac3b
 
