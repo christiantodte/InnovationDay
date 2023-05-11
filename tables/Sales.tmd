@@ -16,15 +16,13 @@ table Sales
 			in
 			    #"Renamed Columns"
 
-	measure 'PY Sales' = CALCULATE(SUM(Sales[Revenue]),SAMEPERIODLASTYEAR('Date'[Date]))*100 // this again is the reason we use comments
-
- // Desync
+	measure 'PY Sales' = CALCULATE(SUM(Sales[Revenue]),SAMEPERIODLASTYEAR('Date'[Date]))*100 
 		formatString:= \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: bd49c349-5773-4b88-b15e-a01d393ee9a0
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure '% Growth' = DIVIDE(SUM(Sales[Revenue])-[PY Sales],[PY Sales])// and this one as well 
+	measure '% Growth' = DIVIDE(SUM(Sales[Revenue])-[PY Sales],[PY Sales]) 
 		formatString:= 0.00%;-0.00%;0.00%
 		lineageTag: 07ca62c6-46a2-4d74-9100-9ab7fb79ed8f
 
